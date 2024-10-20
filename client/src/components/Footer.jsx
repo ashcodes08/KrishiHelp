@@ -37,13 +37,13 @@ export default function FooterCom() {
               <Footer.Title title='Follow us' />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href='https://github.com/0himanshu3/Agro-Elites'
+                  href='https://github.com/ashcodes08/KrishiHelp'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Github
                 </Footer.Link>
-                <Footer.Link href='#'>Discord</Footer.Link>
+                <Footer.Link href='https://discord.com/channels/844265699135979520/844280192171114567'>Discord</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
@@ -62,14 +62,7 @@ export default function FooterCom() {
             by="Krishi-Help"
             year={new Date().getFullYear()}
           />
-          <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
-            <Footer.Icon href='#' icon={BsFacebook}/>
-            <Footer.Icon href='#' icon={BsInstagram}/>
-            <Footer.Icon href='#' icon={BsTwitter}/>
-            <Footer.Icon href='https://github.com/0himanshu3/Agro-Elites' icon={BsGithub}/>
-            <Footer.Icon href='#' icon={BsDribbble}/>
-
-          </div>
+        
         </div>
       </div>
     </Footer>

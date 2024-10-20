@@ -103,12 +103,7 @@ export default function Header() {
           </Link>
         )}
 
-<Link to='/donation-portal'>
-            <Button gradientDuoTone='purpleToBlue' outline>
-             Donate To Our Cause
-            </Button>
-          </Link>
-        <Navbar.Toggle />
+
       </div>
       <Navbar.Collapse className='flex space-x-4 items-center'>
   <Navbar.Link active={path === '/'} as={'div'} className={`${path === '/' ? 'bg-green-500 text-white font-bold' : 'text-gray-700'}  px-4 py-2 rounded-lg`}>

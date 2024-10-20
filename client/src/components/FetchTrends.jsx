@@ -12,7 +12,7 @@ const FetchTrends = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="bg-white p-8 shadow-lg rounded-lg text-center w-full max-w-5xl dark:bg-slate-800">
+      <div className="bg-white bg-opacity-80 p-8 shadow-lg rounded-lg text-center w-full max-w-5xl dark:bg-slate-800 dark:bg-opacity-80">
         <h1 className="text-3xl font-bold text-green-700 mb-6">
           Understanding Agricultural Market Trends
         </h1>

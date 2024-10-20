@@ -21,8 +21,7 @@ export default function UpdatePost() {
   const [formData, setFormData] = useState({});
   const [publishError, setPublishError] = useState(null);
   const { postId } = useParams();
-  console.log(postId);
-  
+
   const navigate = useNavigate();
     const { currentUser } = useSelector((state) => state.user);
 
@@ -87,13 +86,14 @@ export default function UpdatePost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`/api/post/updatepost/${formData._id}/${currentUser._id}`, {
+      const res = await fetch(`/api/post/updatepost/${postId}/${currentUser._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
+      console.log(formData);
       const data = await res.json();
       if (!res.ok) {
         setPublishError(data.message);
@@ -131,9 +131,15 @@ export default function UpdatePost() {
             value={formData.category}
           >
             <option value='uncategorized'>Select a category</option>
-            <option value='javascript'>JavaScript</option>
-            <option value='reactjs'>React.js</option>
-            <option value='nextjs'>Next.js</option>
+            <option value='crop tips'>Crop Cultivation Tips</option>
+            <option value='pest and disease'>Pest and Disease Management</option>
+            <option value='water management'>Water Management Techniques</option>
+            <option value='organic farming'>Sustainable and Organic Farming</option>
+            <option value='soil health'>Soil Health and Fertilization</option>
+            <option value='tools and equipment'>Farm Equipment and Tools</option>
+            <option value='experiences and stories'>Farm Experiences and Success Stories</option>
+            <option value='finance and loans'>Financial Management and Loans</option>
+            <option value='seeds and crops'>Seed and Crop Varieties</option>
           </Select>
         </div>
         <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
