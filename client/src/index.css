@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--txt);
+}
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--background);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  width: 100% !important;
+}
+
+  @media (max-width: 1024px) {
+    .cards {
+        place-items: center;
+    }
+}
+
+
+
+.pagination-btn {
+  background-color: var(--heading);
+  color: var(--btn-color);
+  width: 130.51px;
+  height: 50px;
+  border-radius: 34px;
+}
+.news-card {
+  width: 400px;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x:hidden;
+  border-radius: 15px;
+  box-shadow: 
+      0 0 10px rgba(0, 0, 0, 0.5),
+      0 0 10px rgba(0, 0, 0, 0.5),
+      0 0 10px rgba(0, 0, 0, 0.5),
+      0 0 10px rgba(0, 0, 0, 0.5);
+      scrollbar-width: none;
+}
+
+.news-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+  background: var(--primary);
+  box-shadow: 0 0 11px grey; 
+}
+
+.news-card-img {
+  width: 280px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.title {
+  font-family: "Freeman", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+.loader-container {
+  height: 100vh;
+  padding: 0; 
+  align-items: center;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  color: var(--heading);
+  background: radial-gradient(farthest-side, currentColor calc(100% - 6px), #0000 calc(100% - 5px) 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 13px), #000 calc(100% - 12px));
+  border-radius: 50%;
+  animation: l19 2s infinite linear;
+}
+
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  background:
+      linear-gradient(currentColor 0 0) center,
+      linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px, 10px 100%;
+  background-repeat: no-repeat;
+}
+
+.loader::after {
+  transform: rotate(45deg);
+}
+@keyframes l19 { 
+  100% { transform: rotate(1turn) }
+}
+@media (max-width: 1024px) {
+  .cards {
+      place-items: center;
+  }
+}
+@media (max-width: 689px) {
+  .news-card {
+      width: 350px;
+  }
+
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
